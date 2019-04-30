@@ -1,0 +1,511 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgba(227, 226, 223, .3);
+    
+}
+
+/***************************************
+*******START LANDING SECTION************
+****************************************/
+/* display none */
+
+
+
+section.landing-page-container{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    
+}
+div.landing-page-wrapper{
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTptDddyBZG4i4cycd6ZIBP2wT8PQKhihUqenZF7GpzlvTZuPghGQ");
+    height: 90vh;
+    width: 95%;
+    margin: 5vh 2.5%;
+    box-shadow: 15px 15px 35px #999;
+    background-size: cover;
+    border-radius: 3px;
+    animation: fade .8s;
+}
+.landing-page-wrapper h1{
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 1px 1px 5px #555;
+    padding-top: 50px;
+}
+div.landing-inputs-wrapper{
+    clip-path: polygon(100% 35%, 100% 35%, 100% 100%, 0 100%, 0 7%);
+    background: antiquewhite;
+    padding: 150px 10px 10px 10px;
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+div.landing-inputs-wrapper input{
+    display: block;
+    padding: 10px;
+    margin-left: 55px;
+    background: antiquewhite;
+    border-top: none;
+    border-left: none;
+    border-bottom: 2px solid gray;
+    font-size: 18px;
+    overflow: hidden;
+    color: slategray;
+}
+#start-quiz-btn{
+    width: 300px;
+    padding: 13px 10px;
+    margin: 15px auto;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    border-radius: 10px;
+    border: 2px solid #aaa;
+    outline: none;
+    background: transparent;
+    display: block;
+    transform: translateX(0px);
+    transition: all .3s;
+}
+#start-quiz-btn:hover{
+    border: 2px solid gainsboro;
+    color: gray;
+    transform: translateX(-1px);
+}
+
+/***************************************
+*******END LANDING SECTION************
+****************************************/
+
+/***************************************
+******* START ADMIN SECTION ************
+****************************************/
+
+section.admin-panel-container{
+    
+    background: wheat;
+    height: 90vh;
+    width: 95%;
+    margin: 5vh 2.5%;
+    position: relative;
+    box-shadow: 15px 15px 35px #999;
+    background-size: cover;
+    border-radius: 3px;
+    animation: fade .8s;
+    overflow: hidden;
+}
+div.admin-panel-wrapper{
+    width: 60%;
+    height: 65%;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    background: rgba(0, 0, 0, .65);
+    border-radius: 3px;
+    overflow: auto;
+}
+div.header{
+    overflow: hidden;
+}
+div.header h2{
+    font-size: 30px;
+    text-align: left;
+    width: 50%;
+    float: left;
+    padding: 20px;
+    color: #fff;
+}
+div.forms-wrapper{
+    width: 80%;
+    margin: 1% auto;
+}
+#new-question-text{
+    font-size: 18px;
+    color: #eeeeee;
+    max-width: 500px;
+    min-width: 300px;
+    width: 50%;
+    height: 60px;
+    border-radius: 2px;
+    border: .5px solid #eee;
+    display: block;
+    margin: 10px 0 10px 80px;
+    padding: 7px;
+    outline: none;
+    background: #444444;
+    transition: all .1s;
+}
+#new-question-text:focus{
+    border: .5px solid #3b8beb;
+    background: #555;
+}
+div.admin-option-wrapper{
+    position: relative;
+    width: 70%;
+}
+div.forms-wrapper input[type="text"]{
+    width: 300px;
+    font-size: 17px;
+    color: #eee;
+    display: block;
+    margin: 10px 0 10px 80px;
+    padding: 5px 3px;
+    outline: none;
+    background: #444;
+    transition: all .5s;
+}
+div.forms-wrapper input[type = "radio"]{
+    position: absolute;
+    top: 10px;
+    left: 45px;
+}
+#question-insert-btn{
+    position: absolute;
+    left: 160px;
+    width: 150px;
+    padding: 5px;
+    background: #444;
+    font-size: 18px;
+    border: 2px solid gray;
+    outline: none;
+    border-radius: 13px;
+}
+#question-clear-btn{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 150px;
+    padding: 5px;
+    background: #444;
+    font-size: 18px;
+    border: 2px solid gray;
+    border-radius: 13px;
+    transition: all .8s;
+}
+.header a button{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 90px;
+    padding: 5px;
+    background: #444;
+    font-size: 18px;
+    border: 2px solid gray;
+    border-radius: 13px;
+}
+
+/************* result list container **************/
+
+div.result-list-container{
+    width: 30%;
+    position: absolute;
+    height: 90%;
+    right: 35px;
+    top: 5%;
+    background: rgba(0, 0, 0, .65);
+    border-radius: 3px;
+    overflow: auto;
+}
+div.result-list-container h2{
+    float: left;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+div.result-list-container button{
+    float: right;
+    margin-top: 2px;
+    margin-right: 5px;
+    width: 90px;
+    padding: 5px;
+    background: #444;
+    font-size: 18px;
+    border: 2px solid gray;
+    border-radius: 13px;
+}
+
+/************* Inserted question wrapper **************/
+div.inserted-questions-wrapper{
+    padding: 10px 0;
+    width: 60%;
+    height: 20%;
+    position: absolute; 
+    left: 40px;
+    bottom: 5px;
+    background: rgba(0, 0, 0, .65
+    );
+    border: 2px solid white;
+    border-radius: 3px;
+    color: antiquewhite;
+}
+div.inserted-questions-wrapper button{
+    position: absolute;
+    right: 12px;
+    background: #444;
+    border-radius: 15px;
+    border-color: #444;
+    width: 55px;
+    border: 2px solid gray;
+    outline: none;
+}
+
+#question-update-btn{
+    margin-left: 82px;
+    background: #444;
+    padding: 5px;
+    border-radius: 15px;
+    visibility: hidden;
+    outline: none;
+
+}
+#question-delete-btn{
+    padding: 5px;
+    margin-left: 180px;
+    border-radius: 15px;
+    background: #444;
+    visibility: hidden;
+    outline: none;
+    text-decoration: none;
+}
+
+/*********************** ADMIN SECTION RESULT ************************/
+
+.results-list-wrapper{
+    font-family: 'Margarine', cursive;
+    position: absolute;
+    top: 90px;
+    left: 20px;   
+}
+
+.del-btn{
+    position: absolute;
+    right: -160px;
+    background: #444;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid wheat;
+}
+
+
+
+/***************************************
+******* END ADMIN SECTION ************
+****************************************/
+
+
+/***************************************
+******* START QUIZE SECTION ************
+****************************************/
+
+/*display none*/
+
+.green{
+    background: rgb(13, 121, 13);
+}
+.red{
+    background: rgba(221, 8, 61, 0.911);
+}
+
+
+/* quiz-wrapper */
+
+.instant-answer-container{
+    opacity: 0;
+    font-family: 'Margarine', cursive;
+    position: relative;
+    top: 25px;
+    left: 15px;
+    padding: 3px;
+    width: 90%;
+    border-radius: 6px;
+}
+
+.instant-answer-container img{
+    width: 40px;
+    
+    
+}
+.instant-answer-container div.instant-answer-wrapper p{
+    display: inline;
+}
+.instant-answer-container div.instant-answer-wrapper button{
+    padding: 5px;
+    border-radius: 3px;
+    position: absolute;
+    outline: none;
+    border: 2px solid bisque;
+    color: slategrey;
+    right: 23px;
+    bottom: 8px;
+}
+
+
+section.quiz-container{
+    background: wheat;
+    height: 90vh;
+    width: 95%;
+    margin: 5vh 2.5%;
+    position: relative;
+    box-shadow: 15px 15px 35px #999;
+    background-size: cover;
+    border-radius: 3px;
+    animation: fade .8s;
+    overflow: hidden;
+}
+
+
+/********** quiz-wrapper ***********/
+
+.quiz-wrapper{
+    width: 48%;
+    height: 80vh;
+    position: absolute;
+    left: 40px;
+    top: 25px;
+    background: rgba(0, 0, 0, .65);
+    border-radius: 3px;
+    padding: 12px;
+    overflow: auto; 
+}
+
+.quiz-options-wrapper{
+    position: relative;
+    top: 50px;
+    left: 10px;
+}
+
+.quiz-options-wrapper div.choice-0{
+    background: rgb(20, 68, 87);
+    padding: 10px;
+    width: 85%;
+    margin-bottom: 25px;
+}
+.quiz-options-wrapper div.choice-1{
+    background: rgb(20, 68, 87);
+    padding: 10px;
+    width: 85%;
+    margin-bottom: 25px;
+}
+.quiz-options-wrapper div.choice-2{
+    background: rgb(20, 68, 87);
+    padding: 10px;
+    width: 85%;
+    margin-bottom: 25px;
+}
+.quiz-options-wrapper div.choice-3{
+    background: rgb(20, 68, 87);
+    padding: 10px;
+    width: 85%;
+    margin-bottom: 25px;
+}
+
+.quiz-options-wrapper span.choice-0{
+    font-size: 23px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid wheat;
+    padding: 3px;
+}
+.quiz-options-wrapper span.choice-1{
+    font-size: 23px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid wheat;
+    padding: 3px;
+}
+.quiz-options-wrapper span.choice-2{
+    font-size: 23px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid wheat;
+    padding: 3px;
+}
+.quiz-options-wrapper span.choice-3{
+    font-size: 23px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid wheat;
+    padding: 3px;
+}
+
+
+.quiz-options-wrapper p.choice-0{
+    display: inline;
+    margin-left: 15px;
+    font-size: 22px;
+    font-family: 'Marck Script', cursive;
+}
+.quiz-options-wrapper p.choice-1{
+    display: inline;
+    margin-left: 15px;
+    font-size: 22px;
+    font-family: 'Marck Script', cursive;
+}
+.quiz-options-wrapper p.choice-2{
+    display: inline;
+    margin-left: 15px;
+    font-size: 22px;
+    font-family: 'Marck Script', cursive;
+}
+.quiz-options-wrapper p.choice-3{
+    display: inline;
+    margin-left: 15px;
+    font-size: 22px;
+    font-family: 'Marck Script', cursive;
+}
+
+.progressBar{
+    position: absolute;
+    background: #444;
+    width: 25%;
+    height: 25vh;
+    right: 140px;
+    top: 30%;
+    text-align: center;
+    padding-top: 25px;
+}
+
+/************************************************
+******************** START FINAL RESULT *************
+*****************************************************/
+
+.final-result-wrapper{
+    background: wheat;
+    height: 90vh;
+    width: 95%;
+    margin: 5vh 2.5%;
+    position: relative;
+    box-shadow: 15px 15px 35px #999;
+    background-size: cover;
+    border-radius: 3px;
+    animation: fade .8s;
+    overflow: hidden;
+}
+
+.final-result{
+    font-family: 'Marck Script', cursive;
+    width: 48%;
+    height: 80vh;
+    position: absolute;
+    left: 350px;
+    top: 25px;
+    background: rgba(0, 0, 0, .65);
+    border-radius: 3px;
+    padding: 12px;
+    overflow: auto;
+    color: wheat;
+}
+#final-logout-btn{
+    padding: 5px;
+    margin-left: 180px;
+    border-radius: 15px;
+    background: rgb(44, 6, 6);
+    color: wheat;
+    outline: none;
+    text-decoration: none;
+}
